@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Street Guardian</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        .container {
+            max-width: 100%;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #6c5ce7, #a8a4e6);
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 0 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+        }
+
+        .btn-primary {
+            background-color: #6c5ce7;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: #6c5ce7;
+            border: 2px solid #6c5ce7;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .features {
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        .feature {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .feature h3 {
+            color: #6c5ce7;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 0;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .button-container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>길거리 방범대</h1>
+    <p>더 나은 사회를 만드는 우리 모두의 발걸음</p>
+</div>
+
+<div class="container">
+    <div class="button-container">
+        <a href="/login" class="btn btn-secondary">로그인</a>
+        <a href="/signup" class="btn btn-primary">회원가입</a>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <h3>봉사 활동 참여</h3>
+            <p>지역 사회를 위한 다양한 봉사 활동에 참여하세요.</p>
+        </div>
+        <div class="feature">
+            <h3>포인트 적립</h3>
+            <p>봉사 활동 참여로 포인트를 모으고 사람들과 경쟁하세요.</p>
+        </div>
+        <div class="feature">
+            <h3>함께하는 변화</h3>
+            <p>작은 노력이 모여 만드는 큰 변화에 동참해주세요.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

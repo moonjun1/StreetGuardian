@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>미션 상세 - Street Guardian</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #6c5ce7, #a8a4e6);
+            color: white;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+        }
+
+        .back-btn {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            margin-right: 15px;
+        }
+
+        .content {
+            margin-top: 60px;
+            padding: 20px;
+        }
+
+        .mission-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .mission-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2d3436;
+        }
+
+        .mission-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9em;
+            color: #636e72;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .mission-content {
+            margin: 20px 0;
+            color: #2d3436;
+            white-space: pre-wrap;
+        }
+
+        .mission-image {
+            width: 100%;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .mission-status {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+        }
+
+        .status-OPEN {
+            background-color: #6c5ce7;
+            color: white;
+        }
+
+        .status-IN_PROGRESS {
+            background-color: #00b894;
+            color: white;
+        }
+
+        .accept-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .accept-btn:disabled {
+            background-color: #b2bec3;
+            cursor: not-allowed;
+        }
+
+        .accept-btn:hover:not(:disabled) {
+            background-color: #5f4dd0;
+        }
+
+        .points {
+            color: #e17055;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <a href="/missions" class="back-btn">←</a>
+    <h1>미션 상세</h1>
+</div>
+
+<div class="content">
+    <div class="mission-card">
+        <div class="mission-title">{{mission.title}}</div>
+        <div class="mission-info">
+            <span>작성자: {{mission.nickname}}</span>
+            <span>신청인원: 0/10명</span>
+            <span class="points">{{mission.point}} 포인트</span>
+        </div>
+
+            <img src="/null.webp" alt="" class="mission-image">
+        <div class="mission-content">{{mission.content}}</div>
+            <button onclick="acceptMission()" class="accept-btn"> 미션 수락하기 </button>
+    </div>
+</div>
+
+<script>
+    function acceptMission() {
+       alert("미션 수락에 성공했습니다.");
+       window.location.href = "/missions";
+    }
+</script>
+</body>
+</html>
